@@ -11,8 +11,8 @@ fi
 # Collect metrics
 CPU=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
 MEM=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
-RX=$(cat /sys/class/net/eth0/statistics/rx_bytes)
-TX=$(cat /sys/class/net/eth0/statistics/tx_bytes)
+RX=$(cat /sys/class/net/ens33/statistics/rx_bytes)
+TX=$(cat /sys/class/net/ens33/statistics/tx_bytes)
 DATE=$(date "+%Y-%m-%d %H:%M:%S")
 
 # Write to log
